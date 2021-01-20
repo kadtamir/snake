@@ -28,13 +28,13 @@ const direction = {
 let startX;
 let startY;
 
-export const touchStart = (e) => {
+const touchStart = (e) => {
   const touchobj = e.changedTouches[0];
   startX = touchobj.pageX;
   startY = touchobj.pageY;
 };
 
-export const touchEnd = (e) => {
+const touchEnd = (e) => {
   const touchobj = e.changedTouches[0];
   const orthogonal =
     Math.abs(touchobj.pageX - startX) > Math.abs(touchobj.pageY - startY)
