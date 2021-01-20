@@ -12,13 +12,10 @@ window.onload = () => {
   // Desktop keyboard
   document.addEventListener('keydown', handleKeyPress);
   // Mobile arrow keypad
-  Array.from(document.querySelectorAll('.arrow')).forEach((arrow) => {
+  DOMConfig.arrows.forEach((arrow) => {
     arrow.addEventListener('click', handleKeyPress);
   });
   DOMConfig.keypadCheckbox.addEventListener('change', handleKeypad);
-  // Mobile swipe
-  document.addEventListener('touchstart', touchStart);
-  document.addEventListener('touchend', touchEnd);
   // Sound
   DOMConfig.soudCheckbox.addEventListener('change', handleMute);
   // Play again

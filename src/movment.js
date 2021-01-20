@@ -30,7 +30,7 @@ export function moveSnake() {
 
 export function handleKeyPress(e) {
   if (
-    (e.keyCode === 37 || e.keyCode === 65 || e.path[0].id === 'arrowLeft') &&
+    (e.path[0].id === 'arrowLeft' || e.keyCode === 37 || e.keyCode === 65) &&
     !board.moveLock
   ) {
     // Left
@@ -40,7 +40,7 @@ export function handleKeyPress(e) {
       board.moveLock = true;
     }
   } else if (
-    (e.keyCode === 38 || e.keyCode === 87 || e.path[0].id === 'arrowUp') &&
+    (e.path[0].id === 'arrowUp' || e.keyCode === 38 || e.keyCode === 87) &&
     !board.moveLock
   ) {
     // Up
@@ -50,7 +50,7 @@ export function handleKeyPress(e) {
       board.moveLock = true;
     }
   } else if (
-    (e.keyCode === 39 || e.keyCode === 68 || e.path[0].id === 'arrowRight') &&
+    (e.path[0].id === 'arrowRight' || e.keyCode === 39 || e.keyCode === 68) &&
     !board.moveLock
   ) {
     // Right
@@ -60,7 +60,7 @@ export function handleKeyPress(e) {
       board.moveLock = true;
     }
   } else if (
-    (e.keyCode === 40 || e.keyCode === 83 || e.path[0].id === 'arrowDown') &&
+    (e.path[0].id === 'arrowDown' || e.keyCode === 40 || e.keyCode === 83) &&
     !board.moveLock
   ) {
     // Down

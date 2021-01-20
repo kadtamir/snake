@@ -114,8 +114,8 @@ input[type=checkbox] { display:none; }
   align-items: center;
 }
 .board div img{
-  width:25px;
-  height:25px;
+  width:12px;
+  height:12px;
 }
 /* Snake */
 .snake{
@@ -168,6 +168,10 @@ input[type=checkbox] { display:none; }
   }
   .board{
     height:70vh;
+  }
+  .board div img{
+    width:25px;
+    height:25px;
   }
   .play-button{
     padding: 1rem 4rem;

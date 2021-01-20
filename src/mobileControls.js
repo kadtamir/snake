@@ -8,13 +8,19 @@ let keypad =
     ? JSON.parse(localStorage.getItem('keypad'))
     : true;
 // First initialization
-DOMConfig.soudCheckbox.checked = keypad;
+DOMConfig.keypadCheckbox.checked = keypad;
 if (keypad) {
   DOMConfig.keypadIcon.innerHTML = '<i class="fas fa-hand-point-up"></i>';
-  DOMConfig.keypad.classList.add('hide');
+  DOMConfig.keypad.classList.remove('hide');
+  // Mobile swipe
+  document.removeEventListener('touchstart', touchStart);
+  document.removeEventListener('touchend', touchEnd);
 } else {
   DOMConfig.keypadIcon.innerHTML = '<i class="fas fa-arrows-alt"></i>';
-  DOMConfig.keypad.classList.remove('hide');
+  DOMConfig.keypad.classList.add('hide');
+  // Mobile swipe
+  document.addEventListener('touchstart', touchStart);
+  document.addEventListener('touchend', touchEnd);
 }
 
 export function handleKeypad(e) {
@@ -22,10 +28,16 @@ export function handleKeypad(e) {
   localStorage.setItem('keypad', JSON.stringify(keypad));
   if (keypad) {
     DOMConfig.keypadIcon.innerHTML = '<i class="fas fa-hand-point-up"></i>';
-    DOMConfig.keypad.classList.add('hide');
+    DOMConfig.keypad.classList.remove('hide');
+    // Mobile swipe
+    document.removeEventListener('touchstart', touchStart);
+    document.removeEventListener('touchend', touchEnd);
   } else {
     DOMConfig.keypadIcon.innerHTML = '<i class="fas fa-arrows-alt"></i>';
-    DOMConfig.keypad.classList.remove('hide');
+    DOMConfig.keypad.classList.add('hide');
+    // Mobile swipe
+    document.addEventListener('touchstart', touchStart);
+    document.addEventListener('touchend', touchEnd);
   }
 }
 

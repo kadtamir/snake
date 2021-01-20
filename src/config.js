@@ -38,4 +38,5 @@ export const DOMConfig = {
   playButton: document.getElementById('play'),
   currentScore: document.getElementById('score'),
   bestScore: document.getElementById('best'),
+  arrows: Array.from(document.querySelectorAll('.arrow')),
 };
