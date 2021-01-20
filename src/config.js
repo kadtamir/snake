@@ -49,7 +49,7 @@ export const controlsConfig = {
   keypad:
     localStorage.getItem('keypad') !== null
       ? JSON.parse(localStorage.getItem('keypad'))
-      : true,
+      : false,
 };
 
 DOMConfig.keypadCheckbox.checked = controlsConfig.keypad;
