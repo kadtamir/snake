@@ -172,8 +172,8 @@ input[type=checkbox] { display:none; }
   .play-button{
     padding: 1rem 4rem;
     font-size:3rem;
-    top:50%;
-    left:42%;
+    top:45%;
+    left:45%;
   }
 }
 
