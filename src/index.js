@@ -1,7 +1,7 @@
 import { startGame } from './app';
 import { handleKeyPress } from './movment';
-import { DOMConfig } from './config';
-import { touchStart, touchEnd, handleKeypad } from './mobileControls';
+import { DOMConfig, controlsConfig } from './config';
+import { handleKeypad } from './mobileControls';
 import { handleMute } from './sound';
 import { resetBoard } from './board';
 import { updateScore } from './score';
@@ -16,8 +16,10 @@ window.onload = () => {
     arrow.addEventListener('click', handleKeyPress);
   });
   DOMConfig.keypadCheckbox.addEventListener('change', handleKeypad);
+  handleKeypad({ target: { checked: controlsConfig.keypad } });
   // Sound
   DOMConfig.soudCheckbox.addEventListener('change', handleMute);
+  handleMute({ target: { checked: controlsConfig.sound } });
   // Play again
   DOMConfig.playButton.addEventListener('click', startGame);
   // Set up first screen

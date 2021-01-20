@@ -40,3 +40,17 @@ export const DOMConfig = {
   bestScore: document.getElementById('best'),
   arrows: Array.from(document.querySelectorAll('.arrow')),
 };
+
+export const controlsConfig = {
+  sound:
+    localStorage.getItem('playSound') !== null
+      ? JSON.parse(localStorage.getItem('playSound'))
+      : true,
+  keypad:
+    localStorage.getItem('keypad') !== null
+      ? JSON.parse(localStorage.getItem('keypad'))
+      : true,
+};
+
+DOMConfig.keypadCheckbox.checked = controlsConfig.keypad;
+DOMConfig.soudCheckbox.checked = controlsConfig.sound;

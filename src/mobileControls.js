@@ -1,32 +1,11 @@
 'use strict';
 import { handleKeyPress } from './movment';
-import { DOMConfig } from './config';
-
-// Render arrow keypad
-let keypad =
-  localStorage.getItem('keypad') !== null
-    ? JSON.parse(localStorage.getItem('keypad'))
-    : true;
-// First initialization
-DOMConfig.keypadCheckbox.checked = keypad;
-if (keypad) {
-  DOMConfig.keypadIcon.innerHTML = '<i class="fas fa-hand-point-up"></i>';
-  DOMConfig.keypad.classList.remove('hide');
-  // Mobile swipe
-  document.removeEventListener('touchstart', touchStart);
-  document.removeEventListener('touchend', touchEnd);
-} else {
-  DOMConfig.keypadIcon.innerHTML = '<i class="fas fa-arrows-alt"></i>';
-  DOMConfig.keypad.classList.add('hide');
-  // Mobile swipe
-  document.addEventListener('touchstart', touchStart);
-  document.addEventListener('touchend', touchEnd);
-}
+import { DOMConfig, controlsConfig } from './config';
 
 export function handleKeypad(e) {
-  keypad = e.target.checked;
-  localStorage.setItem('keypad', JSON.stringify(keypad));
-  if (keypad) {
+  controlsConfig.keypad = e.target.checked;
+  localStorage.setItem('keypad', JSON.stringify(controlsConfig.keypad));
+  if (controlsConfig.keypad) {
     DOMConfig.keypadIcon.innerHTML = '<i class="fas fa-hand-point-up"></i>';
     DOMConfig.keypad.classList.remove('hide');
     // Mobile swipe
