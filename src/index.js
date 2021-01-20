@@ -7,6 +7,7 @@ import { resetBoard } from './board';
 import { updateScore } from './score';
 
 window.onload = () => {
+  DOMConfig.playButton.innerHTML = 'Play';
   // Event listeners
 
   // Desktop keyboard
