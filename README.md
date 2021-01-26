@@ -2,7 +2,6 @@
 
 ![showcase image](/public/img/snake-showcase.png)
 
----
 
 ## [Live Demo](https://kadtamir-snake.netlify.app/)
 
@@ -18,7 +17,6 @@ This is a vanilla JS snake game, my first ever solo project. Built with mobile-f
 - :sound: Toggle sound control
 - :floppy_disk: Save preferences and best score on local storage
 
----
 
 ## Installation and setup
 
