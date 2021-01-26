@@ -90,7 +90,7 @@ input[type=checkbox] { display:none; }
   cursor: pointer;
   position: absolute;
   top:40%;
-  left:33%;
+  left:40%;
   transition: opacity 0.5s ease;
 }
 .play-button:hover{
@@ -182,7 +182,6 @@ input[type=checkbox] { display:none; }
   .play-button{
     padding: 1rem 4rem;
     font-size:3rem;
-    left:40%;
   }
 }
 
