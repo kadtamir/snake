@@ -3,10 +3,10 @@
 ![showcase image](/public/img/snake-showcase.png)
 
 
-## [Live Demo](https://kadtamir-snake.netlify.app/)
+### [Live Demo](https://kadtamir-snake.netlify.app/)
 
 
-### Description
+## Description
 
 This is a vanilla JS snake game, my first ever solo project. Built with mobile-first approach and using webpack.
 
